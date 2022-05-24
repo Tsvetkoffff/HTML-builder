@@ -14,7 +14,7 @@ async function getFilesInfo(folder) {
         const fileExt = path.extname(fullName).split('.')[1];
         const fileSize = await fs.promises.stat(filePath).then((f) => f.size);
 
-        console.log(`${fileName} - ${fileExt} - ${fileSize} kb`);
+        console.log(`${fileName} - ${fileExt} - ${fileSize} b`);
       }
     }
   } catch (err) {
